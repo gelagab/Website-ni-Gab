@@ -1,0 +1,657 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  background-color: #f7fbff;
+}
+
+/* Navbar Container */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1000;
+  padding: 10px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Nav List */
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+/* Nav Items */
+.nav-list li {
+  position: relative;
+}
+
+/* Nav Links */
+.nav-list a {
+  display: block;
+  padding: 10px 16px;
+  text-decoration: none;
+  color: #1e1e1e;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+/* Hover and Active State */
+.nav-list a:hover,
+.nav-list a.active {
+  color: #007bff;
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Dropdown Menu */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  min-width: 180px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.dropdown-menu li a,
+.dropdown-menu li label {
+  padding: 12px 16px;
+  display: block;
+  color: #1e1e1e;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background-color: #f0faff;
+}
+
+/* Aesthetic Hover Effect */
+.dropdown-menu li a:hover,
+.dropdown-menu li label:hover {
+  background: linear-gradient(90deg, #00BFFF, #1e90ff);
+  color: white;
+  box-shadow: inset 0 0 5px rgba(0, 191, 255, 0.5);
+  transform: translateX(3px);
+}
+
+.hero-banner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  flex-wrap: wrap;
+  color: white;
+  background: url("C:/Users/Admin/Desktop/Test/Pictures/background img1.jpg") no-repeat center center/cover;
+  overflow: hidden;
+}
+
+/* Transparent overlay on top of background image only */
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+/* Make sure content like text and img stay on top */
+.hero-text,
+.hero-image {
+  position: relative;
+  z-index: 2;
+}
+
+/* make sure text is above the overlay */
+.hero-text {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  max-width: 50%;
+}
+
+.hero-text .subtitle {
+  color: #00BFFF;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+  line-height: 1.3;
+  margin: 10px 0 30px;
+}
+
+.read-more {
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.read-more:hover {
+  background-color: white;
+  color: #1e1e1e;
+}
+  
+  .hero-image {
+    flex: 1;
+    max-width: 50%;
+    text-align: right;
+    margin-top: 30px;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin-right: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #0099ff;
+  }
+  
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+
+.biography-section {
+  background-color: #e6f5ff; /* light blue outer background */
+  padding: 60px 20px;
+  border-radius: 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 1);
+  border: 1px solid #b3e0ff;
+}
+
+.bio-inner-wrapper {
+  background-color: #ffffff; /* white container inside */
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.bio-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5em;
+  color: #000000;
+  text-align: center;
+  margin: 0 0 30px 0;
+  position: relative;
+}
+
+.bio-heading::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #000000;
+  margin: 5px auto 0 auto;
+  border-radius: 2px;
+}
+
+.biography-skills-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.bio-hover-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.bio-image {
+  flex: 0 0 25%;
+}
+
+.bio-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.bio-text {
+  flex: 1;
+  text-align: justify;
+  color: #000000;
+}
+
+.bio-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5em;
+  color: #000000;
+  text-align: center;
+  margin: 0 0 30px 0;
+  position: relative;
+}
+
+.section-divider {
+  width: 180px;
+  height: 8px;
+  margin: 60px auto;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #00BFFF, #1e90ff, #00BFFF);
+  background-size: 200% auto;
+  animation: flowGlow 3s linear infinite;
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.5), 0 0 25px rgba(30, 144, 255, 0.3);
+}
+
+@keyframes flowGlow {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+.skills-overview {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 60px 40px;
+  background-color: #e6f5ff; /* soft light blue */
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 1);
+  border: 1px solid #b3e0ff;
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5em;
+  color: #000000;
+  text-align: center;
+  margin: 0 0 30px 0;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #000000;
+  margin: 5px auto 0 auto;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.skills-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.skill-box {
+  flex: 1;
+  min-width: 280px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #00BFFF;
+}
+
+.skill-box h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #1e1e1e;
+}
+
+.skill-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #333;
+}
+
+.skill-box ul li {
+  margin: 10px 0;
+  position: relative;
+  padding-left: 25px;
+}
+
+.skill-box ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #00BFFF;
+}
+  
+  .site-footer {
+    background-color: #000;
+    color: #ccc;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9rem;
+    margin-top: 40px;
+    position: relative;
+  }
+  
+  .site-footer a.back-to-top {
+    display: inline-block;
+    margin-top: 10px;
+    color: #00BFFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .site-footer a.back-to-top:hover {
+    color: #fff;
+  }
+  
+.contact-btn {
+  cursor: pointer;
+  background-color: #e6f5ff;
+  color: #000000;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  display: inline-block;
+  margin: 20px auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #00BFFF;
+  color: white;
+}
+
+/* Popup Background */
+.contact-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Show when toggled */
+#contact-toggle:checked ~ .contact-popup {
+  display: flex;
+}
+
+/* Contact Modal Box */
+.contact-box {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: fadeInZoom 0.4s ease-out;
+}
+
+/* Title */
+.contact-box h2 {
+  margin-top: 0;
+  color: #00BFFF;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+
+/* Close Button */
+.close-contact {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.close-contact:hover {
+  color: #00BFFF;
+}
+
+/* Form Fields Layout */
+.contact-box .form-group {
+  margin-bottom: 18px;
+}
+
+.contact-box label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #1e1e1e;
+}
+
+.contact-box input[type="text"],
+.contact-box input[type="email"],
+.contact-box input[type="text"],
+.contact-box textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus {
+  border-color: #00BFFF;
+  outline: none;
+}
+
+/* Submit Button */
+.contact-box input[type="submit"] {
+  background-color: #00BFFF;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.contact-box input[type="submit"]:hover {
+  background-color: #007ACC;
+}
+
+/* Feedback Button */
+.feedback-nav-link {
+  cursor: pointer;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #e6f5ff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.feedback-nav-link:hover {
+  background-color: #00BFFF;
+  color: white;
+}
+
+/* Modal Background */
+.feedback-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Show modal if checkbox is checked */
+#feedback-toggle:checked ~ .feedback-popup {
+  display: flex;
+}
+
+/* Feedback Box */
+.feedback-box {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Feedback Title */
+.feedback-box h2 {
+  margin-top: 0;
+  color: #00BFFF;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+
+/* Close Button */
+.close-feedback {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+.close-feedback:hover {
+  color: #00BFFF;
+}
+
+/* Form Layout */
+.feedback-box .form-group {
+  margin-bottom: 18px;
+}
+
+.feedback-box label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #1e1e1e;
+}
+
+.feedback-box input[type="text"],
+.feedback-box input[type="email"],
+.feedback-box select,
+.feedback-box textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+.feedback-box input:focus,
+.feedback-box textarea:focus,
+.feedback-box select:focus {
+  border-color: #00BFFF;
+  outline: none;
+}
+
+/* Star rating inline */
+.feedback-box .form-group input[type="radio"] {
+  margin-right: 6px;
+}
+.feedback-box .form-group label {
+  margin-right: 10px;
+}
+
+/* Terms checkbox spacing */
+.feedback-box .form-group input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+/* Submit Button */
+.feedback-box input[type="submit"] {
+  background-color: #00BFFF;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}

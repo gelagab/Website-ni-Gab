@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<input type="checkbox" id="feedback-toggle" hidden>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Profile Page</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<!-- Navigator Menu Bar-->
+<body>
+<input type="checkbox" id="contact-toggle" hidden>
+  <input type="checkbox" id="feedback-toggle" hidden>
+
+  <header id="top">
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li><a href="#top" class="active">Home</a></li>
+
+        <!-- Contact Dropdown -->
+        <li class="dropdown">
+          <a href="#">Contact Us ▾</a>
+          <ul class="dropdown-menu">
+            <li>
+              <!-- Toggle Contact Modal -->
+              <label for="contact-toggle" class="nav-link-btn contact-nav-link">Contact Form</label>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Feedback Dropdown -->
+        <li class="dropdown">
+          <a href="#">Feedback ▾</a>
+          <ul class="dropdown-menu">
+            <li>
+              <!-- Toggle Feedback Modal -->
+              <label for="feedback-toggle" class="nav-link-btn feedback-nav-link">Feedback Form</label>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+      
+<!-- Contact Form Toggle -->
+<input type="checkbox" id="contact-toggle" hidden>
+
+<!-- Contact Button (same style as feedback) -->
+<label for="contact-toggle" class="contact-btn">Contact Us</label>
+
+<!-- Contact Form Modal -->
+<div class="contact-popup">
+  <div class="contact-box">
+    <label for="contact-toggle" class="close-contact">×</label>
+    <h2>Contact Us</h2>
+
+    <form action="https://formspree.io/f/xldnkyge" method="POST" target="hidden_iframe" onsubmit="setTimeout(() => {
+      alert('Thank you for contacting us!');
+      this.reset();
+      document.getElementById('contact-toggle').checked = false;
+    }, 100);">
+
+      <div class="form-group">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Your Name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Your message..." required></textarea>
+      </div>
+
+      <input type="submit" value="Send Message">
+    </form>
+  </div>
+</div>
+
+<!-- Hidden iframe to prevent page redirect -->
+<iframe name="hidden_iframe" style="display: none;"></iframe>
+
+
+
+<!-- Feedback Form Toggle -->
+<input type="checkbox" id="feedback-toggle" hidden>
+
+<!-- Feedback Modal -->
+<div class="feedback-popup">
+  <div class="feedback-box">
+    <label for="feedback-toggle" class="close-feedback">×</label>
+    <h2>Feedback</h2>
+
+    <form action="https://formspree.io/f/xyzjaqkz" method="POST" target="hidden_iframe" onsubmit="setTimeout(() => {
+      alert('Thank you for your feedback!');
+      this.reset();
+      document.getElementById('feedback-toggle').checked = false;
+    }, 100);">
+      
+      <!-- Star Rating -->
+      <div class="form-group">
+        <label>Rate this page:</label><br>
+        <label><input type="radio" name="rating" value="1" required> 1</label>
+        <label><input type="radio" name="rating" value="2"> 2</label>
+        <label><input type="radio" name="rating" value="3"> 3</label>
+        <label><input type="radio" name="rating" value="4"> 4</label>
+        <label><input type="radio" name="rating" value="5"> 5</label>
+      </div>
+
+      <!-- Feedback Type Dropdown -->
+      <div class="form-group">
+        <label for="type">Feedback Type:</label>
+        <select id="type" name="type" required>
+          <option value="">-- Please Select --</option>
+          <option value="bug">Bug Report</option>
+          <option value="bug">Praise</option>
+          <option value="suggestion">Suggestion</option>
+          <option value="praise">Others</option>
+        </select>
+      </div>
+
+      <!-- Comment Box -->
+      <div class="form-group">
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Write your feedback..." required></textarea>
+      </div>
+
+      <!-- Terms Checkbox -->
+      <div class="form-group">
+        <label>
+          <input type="checkbox" required> I agree to the terms and conditions
+        </label>
+      </div>
+
+      <!-- Submit -->
+      <input type="submit" value="Submit Feedback">
+    </form>
+  </div>
+</div>
+
+<!-- Hidden iframe to avoid redirect -->
+<iframe name="hidden_iframe" style="display: none;"></iframe>
+
+
+
+  
+<!-- About Me  -->
+<section class="hero-banner">
+    <div class="hero-text">
+      <small class="subtitle">3rd Year Student of PHINMA Saint Jude College - MANILA</small>
+      <h1>Gabriel S. Lazaro<br>Bachelor of Science in Information Technology</h1>
+      <a href="#biography" class="read-more">READ MORE ABOUT MYSELF</a>
+  
+      <!-- Social Media Icon-->
+      <div class="social-icons" style="margin-top: 20px;">
+        <a href="https://www.facebook.com/xtm.gabriel09" target="_blank" rel="noopener noreferrer">
+          <img src="C:\Users\Admin\Desktop\Test\Pictures\facebook.png" alt="Facebook Icon" style="width:24px; vertical-align:middle; margin-right:8px;">
+          Facebook
+        </a>
+        
+        <a href="https://www.linkedin.com/in/lazaro-gabriel-s/" target="_blank" rel="noopener noreferrer">
+          <img src="C:\Users\Admin\Desktop\Test\Pictures\linkedin.png" alt="LinkedIn Icon" style="width:24px; vertical-align:middle; margin-right:8px;">
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  
+    <div class="hero-image">
+      <img src="C:\Users\Admin\Desktop\Test\Pictures\Picture2.jpg" alt="Profile Picture">
+    </div>
+  </section>
+
+<br>
+
+<section class="biography-section" id="biography">
+  <!-- Centered Heading outside white box -->
+  <h2 class="bio-heading">Biography</h2>
+
+  <div class="bio-inner-wrapper">
+    <div class="biography-skills-row">
+      <div class="bio-hover-container">
+        <!-- Picture Left -->
+        <div class="bio-image">
+          <img src="C:/Users/Admin/Desktop/Test/Pictures/Picture1.jpg" alt="Gabriel Picture">
+        </div>
+
+        <!-- Biography Text -->
+        <div class="bio-text">
+          <p>As someone who enjoys playing computer and online games, I chose to pursue a Bachelor of Science in Information Technology. 
+             This program matches my passion for technology, and I am committed to learning more and expanding my skills. 
+             I find excitement in discovering how things work behind the screen and enjoy the challenges that come with solving technical problems.</p>
+          <p>I am also inspired by my uncle, who is a BSIT graduate, and his journey motivates me to follow the same path. 
+            This program is not just a course for me—it's a reflection of what I truly enjoy. I love learning new things, especially those related to 
+            technology, and I dream of becoming a professional web developer someday.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<div class="section-divider"></div>
+
+  <section class="skills-overview">
+  <h2 class="section-title">Skills Overview</h2>
+  <p class="section-subtitle">
+  These are the programming languages and skills I use when building a system.  
+  </p>
+  <div class="skills-columns">
+    <!-- Frontend -->
+    <div class="skill-box">
+      <div class="skill-icon">💻</div>
+      <h3>Frontend</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+
+    <!-- Backend -->
+    <div class="skill-box">
+      <div class="skill-icon">🛠️</div>
+      <h3>Backend</h3>
+      <ul>
+        <li>Java</li>
+        <li>MySQL</li>
+        <li>Python</li>
+        <li>C++</li>
+      </ul>
+    </div>
+
+    <!-- Others -->
+    <div class="skill-box">
+      <div class="skill-icon">🧠</div>
+      <h3>Others</h3>
+      <ul>
+        <li>MS Office</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+      </div>
+    </div>
+  </section>
+  
+  <!--Footer-->
+  <footer class="site-footer">
+    <p>&copy; 2025 Gabriel Lazaro. All rights reserved.</p>
+    <a href="#top" class="back-to-top">Back to Top</a>
+  </footer>
+</body>
+</html>
